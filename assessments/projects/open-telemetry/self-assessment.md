@@ -327,9 +327,20 @@ The Enhancements Telemetry security-related issues can be searched using the key
 Consider security when making pull requests, and need to consider the possibility of exposing sensitive information.
 
 
-### CII Best Practices
+### Recommendation to the project team
 
-Not applicable
+**Security**
+
+* Encryption: Use encrypted transfer protocol (HTTPS) to keep data secure in transit
+* Clean telemetry data: Regularly clean telemetry data to prevent data leakage
+* Avoid sensitive information: When recording telemetry data about sensitive information, it needs to be encrypted for added protection.
+* Update dependencies: Keeps OpenTelemetry's dependencies up-to-date and ensures that OpenTelemetry can maintain optimal performance.
+
+**Reliability**
+
+* Avoid outdated APIs: Use the latest API version to avoid unreliability caused by obsolete APIs.
+* Ensure adequate metrics: OpeTelemetry collects sufficient metrics to analyze application behavior and performance better.
+* Fault tolerance mechanism: Set up a reasonable fault-tolerance mechanism so OpenTelemetry can run stably when an error occurs and implement data telemetry.
 
 
 ### Case Studies
