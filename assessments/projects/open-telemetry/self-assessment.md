@@ -197,7 +197,15 @@ In case of anomalies or incidents detected through telemetry data, alerts are ge
 
 **General**
 
-* Data limitations: OpenTelemetry can help you compile and collect high-quality telemetry data, but data storage and visualization still require other tools, and code analysis and application security are unavailable.
+* User Interface for Data Visualization: OpenTelemetry primarily focuses on data collection and instrumentation. It does not aim to provide comprehensive data visualization or user interface solutions. For visualization, it is typically integrated with other tools.
+* Data Storage Solutions: OpenTelemetry does not provide a data storage solution for telemetry data. It is up to the users to integrate it with databases or data storage systems where the telemetry data will be stored and analyzed.
+* Automatic Troubleshooting and Resolution: OpenTelemetry collects and provides data that can be vital for troubleshooting, but it does not automate the problem resolution process. It provides the data necessary to diagnose issues, but resolving them typically requires human intervention or additional tools.
+
+**Security**
+
+* End-to-end Application Security: The primary focus of the project OpenTelemetry is for monitoring and observability, and the applications of this project require other tools, and code analysis and application security are unavailable. Hence, it does not replace the need for dedicated application security tools and practices.
+* Automated Security Patching and Updates: OpenTelemetry project does not manage neither does it automate the application of security patches for software systems. This remains the responsibility of the system administrators or other security tools which are using OpenTelemetry to keep the softwares and their systems updated on security patches.
+* Compliance Auditing and Reporting: Even though we see that OpenTelemetry can certainly help in collecting data that might be relevant for compliance purposes, it is not a compliance auditing tool. Hence, it does not provide specific features for compliance reporting or auditing against standards like GDPR, HIPAA, or PCI-DSS.
 
 ## Self-Assessment Use
 
