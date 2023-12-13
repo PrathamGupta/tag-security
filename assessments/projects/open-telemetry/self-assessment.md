@@ -328,6 +328,7 @@ Consider security when making pull requests, and need to consider the possibilit
 * Clean telemetry data: Regularly clean telemetry data to prevent data leakage
 * Avoid sensitive information: When recording telemetry data about sensitive information, it needs to be encrypted for added protection.
 * Update dependencies: Keeps OpenTelemetry's dependencies up-to-date and ensures that OpenTelemetry can maintain optimal performance.
+* CII Best Practices: OpenTelemetry should participate in the CII best practices and align themselves with it, so that it improves the trust and security of their code, helps in identifying and managing risk in development and other fundamental usecases. 
 
 **Reliability**
 
