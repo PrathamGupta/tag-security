@@ -179,17 +179,14 @@ In case of anomalies or incidents detected through telemetry data, alerts are ge
 
 **General**
 
-* Custom telemetry: Set sensible defaults but allow customization.
-* Own your data: Not tied to proprietary data formats or tools.
-* High performance: Unexpected interference effects do not exist in the host application.
-* Simplicity: It is only necessary to learn a single set of APIs and conventions to capture traces and metrics, simplifying the application instrumentation process.
+* Customized observability features: Opentelemetry aims to set sensible configurations by default, but also allows for a wide array of flexibility and configuration
+* Own your data: OpenTelemetry is an open source project, it also provides the open source OTLP for telemetry data. This allows you to use one protocol and data collection system that is independent of proprietary data formats or tools. However, the Opentelemetry collector is also capable of sending and receiving data to and from a wide array of proprietary data formats.
+* Simplicity: OpenTelemetry allows you to learn only a single set of APIs and conventions to capture traces and metrics, simplifying the application instrumentation process. Furthermore, the OpenTelemetry Collector supports multiple Receivers and Exporters, allowing you to manage data input and output from a single location.
 
 **Security**
 
-* To prevent resource exhaustion attacks, default parameters such as queues and payloads should be accounted for.
 * Data integrity: The entire transaction of OpenTelemetry carries contextual information to ensure that each part can understand the whole transaction, and the error handling methods included in OpenTelemetry can also help maintain data integrity.
-* Authentication: Need authenticated entities to interact with the system.
-* Authorization:  Need authorized entities to interact with the system.
+* Data confidentiality: OpenTelemetry supports TLS encryption to secure your data in transport between external sources/sinks and the Collector.
 * Access control functionalities: Opentelemetry uses RBAC to control user access to data and functionality.
 
 
