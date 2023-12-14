@@ -130,7 +130,7 @@ As these components are the primary source of incoming data, they can also becom
 
 **OpenTelemetry Collector**
 
-The OpenTelemetry Collector is a vendor-agnostic implementation of how to receive, process and export telemetry data. It consists of multiple components: Receivers, Processors, Exporters, and Extensions. It serves as middleware between the raw telemetry feeds and telemetry frontends. It receives data via the the OTLP Receiver and other multiple receivers, each one receiving a potentially different format and telemetry data type, like Prometheus, Jaeger, Zipkin, etc using the OpenTelemetry Protocol. The collector then processes the data, handling jobs such as retries, batching, and encryption. It then exports the data to an Observability frontend, like Jaeger or Prometheus among others for analysis.
+The [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) is a vendor-agnostic implementation of how to receive, process and export telemetry data. It consists of multiple components: Receivers, Processors, Exporters, and Extensions. It serves as middleware between the raw telemetry feeds and telemetry frontends. It receives data via the the OTLP Receiver and other multiple receivers, each one receiving a potentially different format and telemetry data type, like Prometheus, Jaeger, Zipkin, etc using the OpenTelemetry Protocol. The collector then processes the data, handling jobs such as retries, batching, and encryption. It then exports the data to an Observability frontend, like Jaeger or Prometheus among others for analysis.
 
 While the components (Receiver, Processor, Exporter) are ostensibly separate parts of the Collector and can be enabled/disabled independently, they are all controlled by a central configuration in the Collector. In the context of the Collector, this configuration only exists in the memory. However, different deployments, such as Docker and Kubernetes have their own way of handling and storing the configuration.
 
@@ -210,10 +210,11 @@ In case of anomalies or incidents detected through telemetry data, alerts are ge
 
 ## Self-Assessment Use
 
-Our team comprises graduate students from different professional backgrounds, and each member is rich in insight. We have come together with a shared commitment to create this self-assessment to analyze the overall security of OpenTelemetry. This document mainly helps users get a preliminary understanding of OpenTelemetry’s security architecture and security development practices. In addition, it allows users to have a deeper understanding of the security functions of OpenTelemetry, helping users better develop, use, and telemetry the data they need.
+This self-assessment is created by the Security Pals team to perform an internal analysis of the project's security. It is not intended to provide a security audit of OpenTelemetry, or function as an independent assessment or attestation of OpenTelemetry's security health.
 
-All in all, this document helps explain this CNCF open source project, pave the way for the project to seek graduation, provide clear guidance during the incubation process, and bring a more transparent and clear security audit to the overall project.
+This document serves to provide OpenTelemetry users with an initial understanding of OpenTelemetry's security, where to find existing security documentation, OpenTelemetry plans for security, and general overview of OpenTelemetry security practices, both for development of OpenTelemetry as well as security of OpenTelemetry.
 
+This document provides the CNCF TAG-Security with an initial understanding of OpenTelemetry to assist in a joint-assessment, necessary for projects under incubation. Taken together, this document and the joint-assessment serve as a cornerstone for if and when OpenTelemetry seeks graduation and is preparing for a security audit.
 
 ## Security Functions and Features
 
@@ -325,7 +326,6 @@ The Enhancements Telemetry security-related issues can be searched using the key
 Consider security when making pull requests, and need to consider the possibility of exposing sensitive information.
 
 
-
 ### Recommendation to the project team
 
 **Security**
@@ -348,7 +348,7 @@ Consider security when making pull requests, and need to consider the possibilit
 
 We've seen users of OpenTelemetry use the following way:
 
-* Kubernetes is used to deploy and manage applications, but traditional monitoring technology has many limitations, so OpenTelemetry is used to observe applications in the Kubernetes environment. Deploy the OpenTelemetry collector on Kubernetes, add the OpenTelemetry SDK to help capture critical contextual information in the application and some performance data, and then use the OTEL detection library provided by OpenTelemetry to transfer the collected data to Prometheus to analyze the data. Perform visualization. Help better analyze and understand application performance through visual data. The powerful methods and accurate data brought by OpenTelemetry can help Kubernetes environments find and solve problems promptly and improve application availability.
+* [Kubernetes](https://opentelemetry.io/docs/kubernetes/) is used to deploy and manage applications, but traditional monitoring technology has many limitations, so OpenTelemetry is used to observe applications in the Kubernetes environment. Deploy the OpenTelemetry collector on Kubernetes, add the OpenTelemetry SDK to help capture critical contextual information in the application and some performance data, and then use the OTEL detection library provided by OpenTelemetry to transfer the collected data to Prometheus to analyze the data. Perform visualization. Help better analyze and understand application performance through visual data. The powerful methods and accurate data brought by OpenTelemetry can help Kubernetes environments find and solve problems promptly and improve application availability.
 
 * OpenTelemetry makes generating, collecting, and exporting data from applications easy. We can use OpenTelemetry for system monitoring and then use a visual monitoring system to integrate the data sets generated by OpenTelemetry. For example, use AWS to build a simple microservice. After completing this configuration, use OpenTelemetry in the service to parse and track some contextual information. After the data collection, use Jaeger to connect to OpenTelemetry to obtain a more beautiful visual interface. When we try to access Jaeger, we can see some exception stack information, which helps us analyze online exceptions and understand the operating response of the system.
 
