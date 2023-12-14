@@ -106,7 +106,7 @@ OpenTelemetry is an observability framework and toolkit that helps developers un
 
 ### Background
 
-OpenTelemetry is an Observability framework and toolkit designed to create and manage telemetry data such as traces, metrics, and logs. Opentelemetry provides a standard protocol for dealing with telemetry data, language SDKs, a collector that receives, processes, and exports telemetry data, as well as other documentation and tools for telemetry.
+OpenTelemetry is an observability framework and toolkit designed to create and manage telemetry data including traces, metrics, and logs. OpenTelemetry provides a standard protocol ([OTLP](https://opentelemetry.io/docs/specs/otlp/)) for dealing with telemetry data, language SDKs, a collector that receives, processes, and exports telemetry data, as well as other documentation and tools for telemetry.
 
 The OpenTelemetry Collector offers a vendor-agnostic implementation on how to receive, process and export telemetry data. In addition, it removes the need to run, operate and maintain multiple agents/collectors in order to support open-source telemetry data formats (e.g. Jaeger, Prometheus, etc.) to multiple open-source or commercial back-ends. The Collector may utilize one or more Receivers which accept data from external services in a wide variety of telemetry data formats, it then processes the data and exports it to further Observability frontends/APIs such as Jaeger and Prometheus.
 
@@ -124,9 +124,9 @@ OpenTelemetry provides various SDKs for C++, .NET, Erlang / Elixir, Go, Java, Ja
 
 This instrumentation can be automatic, in which case, they export relevant telemetry to the OpenTelemetry Collector with minimal configuration from the user. Alternatively, they can be manual. In this case, the user manually configures the system using the SDK and OpenTelemetry API to provide the relevant data to the Collector.
 
-Furthermore, a third party application, such as microservices or applications with instrumented code, that produces data in the OTLP format may be used to send telemetry to the collector.
+Furthermore, in a third party application, such as microservices or applications with instrumented code, that produces data in the OTLP format may be used to send telemetry to the collector.
 
-As these components are the primary source of incoming data, they also serve as the primary attack surface. A hypothetical attacker may be able to deliver a malicious payload by simply performing an action that is logged, these malicious payloads could be embedded scripts in the logs or trace data. They can use this to either attack the SDK and try and gain control of the system directly, or to attack components further down the pipeline, such as the Collector. This could be done using script execution vulnerabilities or other such attacks.
+As these components are the primary source of incoming data, they can also become a the primary attack surface. A hypothetical attacker may be able to deliver a malicious payload by simply performing an action that is logged, these malicious payloads could be embedded scripts in the logs or trace data. They can use then exploit this to either attack the SDK and try to gain control of the system directly, or to attack components further compromise downstream components, such as the Collector. This could be done using script execution vulnerabilities or other such attacks.
 
 **OpenTelemetry Collector**
 
