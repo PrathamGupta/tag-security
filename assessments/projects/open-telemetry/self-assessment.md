@@ -172,7 +172,12 @@ The data is analyzed, and insights are presented through dashboards or alerts. A
 
 **Alerting and Incident Response**
 
-In case of anomalies or incidents detected through telemetry data, alerts are generated. The alerting mechanism is secured to prevent false alerts and ensure that alerts reach the correct recipients. Incident response protocols are in place to handle any security incidents reported through these alerts.
+Alerts are generated in case of anomalies or incidents detected through telemetry data. Below are alerting modes and the priority from top to bottom, with the top being the highest priority.
+* Error rate alert: When the telemetry data error rate reaches the set threshold, the system will issue an alarm to help us quickly identify errors and maintain system performance.
+* Delayed alert: When the response time of the telemetry data exceeds the set threshold, the system issues an alert and helps us identify the scope of the impact on the user experience.
+* Saturation alert: An alarm will be triggered when a large amount of telemetry data causes resources to near saturation. The alarm helps us eliminate idle resources promptly.
+
+The alerting mechanism is secured to prevent false alerts and ensure that alerts reach the correct recipients. Incident response protocols are in place to handle any security incidents reported through these alerts.
 
 
 ### Goals
