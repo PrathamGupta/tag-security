@@ -293,6 +293,8 @@ All code is maintained on [Github](https://github.com/open-telemetry/opentelemet
 
 OpenTelemetry is a toolkit to design and export telemetry data. The project is supported for both developers and operations teams to make it much more viable in any context. It has support and instrumentation in almost all of the popular programming languages. It is a CNCF Incubation project and integrates with most of the other projects, namely, Kubernetes and others. It is also used by major companies such as JP Morgan, Splunk, etc.
 
+Reference to the first integrations that offer-first party support for OpenTelemetry is present here in [Integrations](https://opentelemetry.io/ecosystem/integrations/)
+
 
 ## Security Issue Resolution
 
