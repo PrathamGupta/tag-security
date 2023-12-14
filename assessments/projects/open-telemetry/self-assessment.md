@@ -329,6 +329,7 @@ Consider security when making pull requests, and need to consider the possibilit
 * Avoid outdated APIs: Use the latest API version to avoid unreliability caused by obsolete APIs.
 * Ensure adequate metrics: OpeTelemetry collects sufficient metrics to analyze application behavior and performance better.
 * Fault tolerance mechanism: Set up a reasonable fault-tolerance mechanism so OpenTelemetry can run stably when an error occurs and implement data telemetry.
+* Leverage distributed tracing: Use the distributed tracing of requests on different links provided by the OpenTelemetry platform to help identify abnormal parameters and performance bottlenecks.
 
 
 
